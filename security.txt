@@ -1,0 +1,7 @@
+# Soubor pro bezpečnostní výzkumníky (RFC 9116).
+# Chcete nám nahlásit bezpečnostní problém? Napište prosím e-mailem —
+# ozveme se co nejdříve a problém vyřešíme.
+Contact: mailto:Lucan.M@seznam.cz
+Expires: 2027-10-19T00:00:00.000Z
+Preferred-Languages: cs, en
+Canonical: https://www.ucetnictvi-lucan.cz/security.txt

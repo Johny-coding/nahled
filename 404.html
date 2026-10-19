@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#F3ECDD">
+  <meta name="description" content="Stránka nebyla nalezena. Vraťte se na úvodní stránku webu Martina Lučana — účetnictví, mzdy a daně.">
+  <title>Stránka nenalezena | Martin Lučan</title>
+  <link rel="icon" type="image/png" href="pes.png">
+  <link rel="stylesheet" href="style.css?v=14">
+  <style>
+    body {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    .error-header {
+      background: var(--hero);
+      border-bottom: 1px solid rgba(69, 59, 46, 0.08);
+    }
+    .error-header-inner {
+      display: flex;
+      align-items: center;
+      width: min(1060px, calc(100% - 44px));
+      min-height: var(--header-height);
+      margin-inline: auto;
+    }
+    .error-main {
+      display: grid;
+      place-items: center;
+      padding: 52px 0;
+    }
+    .error-panel {
+      width: min(760px, calc(100% - 40px));
+      padding: clamp(38px, 8vw, 76px) 24px;
+      border-radius: 28px;
+      background: var(--hero);
+      text-align: center;
+    }
+    .error-code {
+      margin: 0;
+      color: var(--orange);
+      font-size: clamp(76px, 13vw, 132px);
+      font-weight: 800;
+      letter-spacing: -0.085em;
+      line-height: 0.95;
+    }
+    .error-title {
+      margin: 20px 0 0;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1.15;
+    }
+    .error-copy {
+      max-width: 540px;
+      margin: 14px auto 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .error-actions .button {
+      min-width: 150px;
+      padding: 0 22px;
+    }
+    .error-secondary {
+      border: 1px solid rgba(27, 26, 26, 0.18);
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.72);
+    }
+    .error-secondary:hover {
+      background: #fff;
+      transform: translateY(-2px);
+    }
+    .error-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 4px 18px;
+      padding: 15px 20px;
+      color: var(--footer-link);
+      background: var(--footer);
+      font-size: 13px;
+      text-align: center;
+    }
+    .error-footer a {
+      color: inherit;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .error-footer a:hover {
+      color: var(--orange);
+    }
+    @media (max-width: 520px) {
+      .error-header-inner {
+        min-height: 92px;
+      }
+      .error-main {
+        padding: 28px 0;
+      }
+      .error-panel {
+        border-radius: 22px;
+      }
+      .error-copy {
+        font-size: 15px;
+      }
+      .error-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="error-header">
+    <div class="error-header-inner">
+      <a class="brand" href="index.html" aria-label="Martin Lučan, úvodní stránka">
+        <img class="brand-dog" src="pes.png" alt="" width="174" height="300">
+        <span class="brand-copy">
+          <strong>Martin Lučan</strong>
+          <span>Účetnictví a daně</span>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main class="error-main" id="main-content" aria-labelledby="error-title">
+    <section class="error-panel">
+      <p class="error-code" aria-hidden="true">404</p>
+      <h1 class="error-title" id="error-title">Tuhle stránku jsme nenašli.</h1>
+      <p class="error-copy">Adresa možná obsahuje překlep, nebo stránka už není dostupná. Zkuste se vrátit na úvod.</p>
+      <div class="error-actions">
+        <a class="button button-primary" href="index.html">Zpět na úvod</a>
+        <a class="button error-secondary" href="index.html#kontakt">Kontakt</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="error-footer">
+    <span>© 2026 Martin Lučan</span>
+    <a href="index.html#kontakt">Kontakt</a>
+    <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+    <a href="cookies.html">Cookies</a>
+  </footer>
+</body>
+</html>

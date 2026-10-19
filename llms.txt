@@ -1,0 +1,19 @@
+# Martin Lučan | Účetnictví a daně
+
+> Český web účetních a souvisejících služeb Martina Lučana. Spolupráce osobně na Ostravsku a na dálku s klienty z celé České republiky.
+
+## Služby a stránky
+- [Úvodní stránka](https://www.ucetnictvi-lucan.cz/): Přehled služeb a kontaktní formulář.
+- [Vedení účetnictví](https://www.ucetnictvi-lucan.cz/ucetnictvi.html): Zpracování dokladů, přiznání k DPH, kontrolní a souhrnná hlášení.
+- [Daňová evidence](https://www.ucetnictvi-lucan.cz/danova-evidence.html): Přehled příjmů a výdajů, dokladů a účtenek.
+- [Personalistika a mzdy](https://www.ucetnictvi-lucan.cz/personalistika-a-mzdy.html): Výplaty, odvody a přihlášky nebo odhlášky zaměstnanců.
+- [Daňová přiznání](https://www.ucetnictvi-lucan.cz/danova-priznani.html): Příprava podkladů, zpracování přiznání a projití výsledku.
+- [Poradenství v oblasti daní](https://www.ucetnictvi-lucan.cz/poradenstvi-v-oblasti-dani.html): Orientace v daňových povinnostech a odvodech při podnikání.
+
+## Kontakt
+- Telefon: +420 605 175 347
+- E-mail: Lucan.M@seznam.cz
+
+## Právní informace
+- [Ochrana osobních údajů](https://www.ucetnictvi-lucan.cz/ochrana-osobnich-udaju.html): Zásady GDPR — jaké údaje správce zpracovává, proč, jak dlouho a jaká mají subjekty práva.
+- [Zásady používání cookies](https://www.ucetnictvi-lucan.cz/cookies.html): Web používá pouze nezbytné technické úložiště, žádné reklamní ani analytické cookies.

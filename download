@@ -1,0 +1,61 @@
+# ============================================================
+#  .htaccess — web www.ucetnictvi-lucan.cz
+#
+#  1) Vlastní chybové stránky (404/500 při chybě naskočí)
+#  2) Bezpečnostní hlavičky (CSP, clickjacking, HSTS, nosniff…)
+#  3) Zakázaný přístup ke skrytým souborům (.git, .htaccess…)
+#  4) Kompresování a cache pro rychlejší načítání
+#
+#  Určeno pro Apache hosting (Endora apod.). GitHub Pages tento
+#  soubor ignoruje — tam zajišťuje chybu automaticky 404.html.
+#  Každý blok je chráněn <IfModule>: kdyby hosting modul neměl,
+#  tiše se přeskočí a web nespadne.
+# ============================================================
+
+# --- 1) Chybové stránky -------------------------------------------------
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# --- 2) Zakázat přístup ke skrytým souborům -----------------------------
+#        (.git, .htaccess, zálohy…) — složku .well-known necháváme volnou
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule (^|/)\.(?!well-known) - [F]
+</IfModule>
+
+# --- 3) Bezpečnostní hlavičky -------------------------------------------
+<IfModule mod_headers.c>
+  # Ochrana proti clickjackingu — web si nikdo nevloží do cizího rámečku
+  Header always set X-Frame-Options "DENY"
+  # Prohlížeč nesmí hádat typ souboru
+  Header always set X-Content-Type-Options "nosniff"
+  # Do cizích webů posíláme jen doménu, ne celou adresu stránky
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Žádný přístup ke kameře, mikrofonu, geolokaci apod.
+  Header always set Permissions-Policy "camera= (), microphone= (), geolocation= (), payment= ()"
+  # Nutit HTTPS po dobu 1 roku (aktivuje se po prvním načtení přes https)
+  Header always set Strict-Transport-Security "max-age=31536000"
+  # Stejná CSP jako v meta tagu + frame-ancestors (lepší ochrana proti překliknutí)
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; upgrade-insecure-requests"
+</IfModule>
+
+# --- 4) Kompresování (menší přenos dat) ---------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# --- 5) Cache pro statické soubory --------------------------------------
+#        Změny CSS/JS se projeví díky verzování ?v=N v odkazech.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType text/plain "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
+</IfModule>
